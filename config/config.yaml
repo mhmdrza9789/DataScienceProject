@@ -1,0 +1,39 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_url: https://ghproxy.com/https://raw.githubusercontent.com/krishnaik06/datasets/main/winequality-data.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+data_validation:
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/winequality-red.csv
+  STATUS_FILE: artifacts/data_validation/status.txt
+
+
+
+#   data_ingestion:
+#   # 
+#   root_dir: "artifacts/data_ingestion"
+#   local_data_file: "artifacts/data_ingestion/data.zip"
+# unzip_dir: artifacts/data_ingestion
+
+#   # 
+#   sources:
+#     github:
+#       type: "url"
+#       source_url: "https://raw.githubusercontent.com/..."
+    
+#     kaggle:
+#       type: "kaggle"
+#       source_id: "rishavdash/retail-demand-forecasting-dataset"
+      
+#     mongodb:
+#       type: "database"
+#       host: "mongodb+srv://user:password@cluster.mongodb.net"
+#       database_name: "sales_db"
+#       collection_name: "transactions"
+
+# # 
+# active_source: "github"
